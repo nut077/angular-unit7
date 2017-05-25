@@ -1,0 +1,29 @@
+.tabs {
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.tabs::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.tab {
+  float: left;
+  margin-bottom: -1px;
+}
+.content {
+  margin-top: 1rem;
+}
+.link {
+  display: block;
+  padding: .5em 1em;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.active {
+  color: #55595c;
+  background-color: #fff;
+  border-color: #ddd #ddd transparent;
+}

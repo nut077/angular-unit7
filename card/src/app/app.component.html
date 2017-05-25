@@ -1,0 +1,31 @@
+<app-card [content]="content">
+  <app-card-header>Header</app-card-header>
+  <app-card-footer>Footer</app-card-footer>
+</app-card>
+<app-notes>
+  <app-note [published]="true">Note1</app-note>
+  <app-note [published]="true">Note2</app-note>
+  <app-note [published]="true">Note3</app-note>
+  <app-note [published]="false">Note4</app-note>
+</app-notes>
+<app-tabs>
+  <app-tab tab-title="First">This is the first content</app-tab>
+  <app-tab tab-title="Second">This is the second content</app-tab>
+  <app-tab tab-title="Third">This is the third content</app-tab>
+</app-tabs>
+<app-counter [counter]="counter" (countChange)="counter=$event"></app-counter>
+<p appUnderline="blue">text underline on mouse enter</p>
+<table>
+  <tr *ngFor="let note of notelist; let line = index; let even = even; let odd = odd" [ngClass]="{'even': even, 'odd': odd}">
+    <td>{{note.content}}</td>
+    <td>{{(line + 1)}}</td>
+  </tr>
+</table>
+<p *appUnless="currentNode.private">{{currentNode.content}}</p>
+<ng-container *ngFor="let second of [1, 2, 3]">
+  <div *appDelay="second">{{second}}</div>
+</ng-container>
+<div *appRandomLoop="[2, 4, 6, 8]; let num = num">
+  {{num}}
+</div>
+

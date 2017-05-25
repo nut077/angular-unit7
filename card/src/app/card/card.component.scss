@@ -1,0 +1,10 @@
+$color-border-card: rgba(0, 0, 0, .125);
+.card {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid $color-border-card;
+}
+
+.card-block {
+  padding: 1.25rem;
+}
